@@ -154,7 +154,7 @@ primBasis  = [
     fun "getChar"  -: [ty| unit -> char |]
       -= \() -> fmap char2integer getChar,
     fun "flush"    -: [ty| unit -> unit |]
-      -= \() -> IO.hFlush IO.stdout,
+      -= \() -> System.IO.hFlush System.IO.stdout,
     fun "putStr"   -: [ty| string -> unit |]
       -= putStr,
     fun "putStrLn" -: [ty| string -> unit |]
